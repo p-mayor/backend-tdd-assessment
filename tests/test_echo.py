@@ -44,7 +44,7 @@ class TestEcho(unittest.TestCase):
             stdout=subprocess.PIPE)
         stdout, _ = process.communicate()
 
-        self.assertEquals(stdout, "hello")
+        self.assertEquals(stdout.strip(), "hello")
 
     def test_parser(self):
         parser = create_parser()
